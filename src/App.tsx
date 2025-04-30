@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import type { Schema } from "../amplify/data/resource";
 import { generateClient } from "aws-amplify/data";
 import { useAuthenticator } from '@aws-amplify/ui-react';
@@ -24,12 +24,12 @@ function App() {
     }
   }
 
-  function deleteTodo(id: string, e) {
+  function deleteTodo(id: string, e: React.MouseEvent) {
     e.stopPropagation();
     client.models.Todo.delete({ id });
   }
 
-  const handleKeyPress = (e) => {
+  const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
       createTodo();
     }
