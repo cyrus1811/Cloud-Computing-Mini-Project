@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,101 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #35e9f0, #70db94);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #9370dbaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #9370DBaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 1.5em;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+}
+
+.read-the-docs {
+  color: #e0e0ff;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* Additional styles to enhance the todo UI while keeping original classes */
+h1 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+button {
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem;
+  width: 100%;
+  max-width: 400px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+input {
+  border: none;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  font-size: 1rem;
+  box-sizing: border-box;
 }
